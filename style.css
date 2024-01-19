@@ -2,6 +2,10 @@ body {
     background: rgba(5, 4, 3, 255);
 }
 
+alt {
+    color: white;
+}
+
 #header {
     width: 100%;
     height: 100vh;
@@ -58,7 +62,9 @@ body {
     color: white;
 }
 
-.profile-pic-2 {
+.profilePic {
+    width: 100%;
+    height: 100%;
     margin-top: 10%;
 }
 
@@ -579,5 +585,9 @@ textarea {
     .btn {
         font-size: 12px;
         width: 8rem;
+    }
+
+    .profilePic {
+        margin-left: 20%;
     }
 }
