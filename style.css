@@ -335,6 +335,10 @@ form {
     margin: 50px 0;
 }
 
+label {
+    color: black;
+}
+
 .headerContact {
     color: white;
     font-size: 32px;
