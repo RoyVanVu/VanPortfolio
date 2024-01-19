@@ -29,12 +29,12 @@ alt {
     color: white;
 }
 
-.header-text strong {
+.header-text h1 {
     font-size: 60px;
     font-weight: 450;
 }
 
-.header-text strong span {
+.header-text h1 span {
     color: #FF0000;
 }
 
@@ -558,7 +558,7 @@ textarea {
         font-size: 21px;
     }
 
-    .header-text strong {
+    .header-text h1 {
         font-size: 35px;
     }
 
