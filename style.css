@@ -1,0 +1,580 @@
+body {
+    background: rgba(5, 4, 3, 255);
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(profile3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.header-text {
+    margin-top: 20%;
+    margin-left: 8%;
+    font-size: 35px;
+    font-weight: 100;
+    color: white;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    font-weight: 450;
+}
+
+.header-text h1 span {
+    color: blue;
+}
+
+/*--about--*/
+#about {
+    padding: 80px 0;
+    color: gainsboro;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-sm-4 {
+    flex-basis: 35%;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 550;
+    margin: 3%;
+    margin-left: -1%;
+    color: white;
+}
+
+.profile-pic-2 {
+    margin-top: 10%;
+}
+
+.tab-titles {
+    display: flex;
+}
+
+.cols {
+    font-size: 18px;
+    font-weight: 450;
+    cursor: pointer;
+    position: relative;
+}
+
+.cols::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: blue;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.cols.active-link::after {
+    margin-left: 4.8%;
+    width: 40%;
+}
+
+.tab-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: -5.2%;
+}
+
+#python {
+    width: 87%;
+    background: red;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+#c-plus {
+    width: 83%;
+    background: blue;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+#html {
+    width: 70%;
+    background: red;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+#css {
+    width: 80%;
+    background: blue;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+#javascript {
+    width: 60%;
+    background: red;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+.tab-contents div {
+    margin: 5px 0;
+    margin-left: 5.2%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: rgb(162, 2, 2);
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*--projects--*/
+:root {
+    --left-bg-color: rgba(87, 84, 236, 0.7);
+    --right-bg-color: rgba(43, 43, 43, 0.8);
+    --left-btn-hover-color: rgba(87, 84, 236, 1);
+    --right-btn-hover-color: rgba(28, 122, 28, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#projects {
+    height: 90vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.subtitle2 {
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    border: white solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+}
+
+.split.left .bth:hover {
+    background-color: var(--left-btn-hover-color);
+    border-color: var(-left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+}
+
+.container.pro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: url("selfdriving.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+
+.split.right {
+    right: 0;
+    background: url("lighting.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.right::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+    transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+    .subtitle2 {
+        font-size: 2rem;
+        top: 30%;
+    }
+
+    .btn {
+        padding: 1.2rem;
+        width: 12rem;
+    }
+}
+
+/*--contacts--*/
+#contact {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background: black;
+    border: solid 3px white;
+    max-width: 768px;
+    margin: 60px auto;
+    position: relative;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input,
+select,
+textarea {
+    color: blue;
+    font: inherit;
+    margin: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+form {
+    padding: 37.5px;
+    margin: 50px 0;
+}
+
+.headerContact {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    border-bottom: solid 2px white;
+    margin: -0.512em auto;
+    width: 80px;
+}
+
+.icon_wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+}
+
+.icon {
+    display: block;
+    fill: white;
+    height: 50px;
+    margin: 0 auto;
+    width: 50px;
+}
+
+.email {
+    float: right;
+    width: 45%;
+}
+
+input[type='text'],
+[type='email'],
+select,
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid 2px white;
+    color: white;
+    font-size: 1.000em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+select {
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.subject {
+    width: 100%;
+}
+
+.telephone {
+    width: 100%;
+}
+
+textarea {
+    line-height: 150%;
+    height: 150px;
+    resize: none;
+    width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+:-moz-placeholder {
+    color: white;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: white;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+#form_button {
+    background: none;
+    border: solid 2px white;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#form_button:hover {
+    background: #474544;
+    color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        margin: 20px auto;
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .underline {
+        width: 68px;
+    }
+
+    #form_button {
+        padding: 15px 25px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .icon {
+        height: 35px;
+        width: 35px;
+    }
+
+    .underline {
+        width: 53px;
+    }
+
+    input[type='text'],
+    [type='email'],
+    select,
+    textarea {
+        font-size: 0.875em;
+    }
+}
+
+/*--css for small screens--*/
+@media screen and (max-width: 1200px) {
+
+    .aboutSubtitle,
+    .aboutPa {
+        margin-left: 30px;
+    }
+
+    .tab-titles {
+        margin-left: 20px;
+    }
+
+    .tab-contents {
+        margin-left: 2px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #header {
+        background-image: url(phoneProfile.png);
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 21px;
+    }
+
+    .header-text h1 {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+
+    .col-sm-4 {
+        margin-bottom: 30px;
+    }
+
+    .col-sm-7 {
+        font-size: 14px;
+    }
+
+    .cols {
+        font-size: 16px;
+    }
+
+    .subtitle2 {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 12px;
+        width: 8rem;
+    }
+}
